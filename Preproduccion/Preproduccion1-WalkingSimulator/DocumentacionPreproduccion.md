@@ -95,15 +95,14 @@ Nota: en esta sección admito que se me ha ido un poco en lo relativo a como esc
 ### Timeline
 
 1. Comienzo del nivel, en la puerta del hogar del avatar de juego.
-2. Camino a izquierda y derecha, se podrá tomar cualquiera ya que ambos llegarán a la plaza del pueblo.
-   1. Si se va a la izquierda, se verá la iglesia, con un cartel en la puerta que indica que no hay párroco.
-   2. Si se va a la derecha, se verán multitud de casas tapiadas.
-3. En la plaza del pueblo, se guiará a las personas que jueguen de manera que recorran la plaza en el siguiente orden:
+2. Camino a izquierda y derecha. Solo se podrá ir a la izquierda al principio, ya que habrá una ambulancia a la derecha atendiendo a un vecino, como cada semana.
+3. Si se va a la izquierda, se verá la iglesia, con un cartel en la puerta que indica que no hay párroco.
+4. En la plaza del pueblo, se guiará a las personas que jueguen de manera que recorran la plaza en el siguiente orden:
    1. Bar del pueblo, con la puerta abierta (se puede pasar). La única puerta abierta del pueblo.
    2. Puerta del ayuntamiento.
-   3. Centro de la plaza, con un banco para sentarse. Al pulsar sobre el banco el tiempo pasará. Se ejecutará una animación que oscurecerá el cielo y será hora de volver a casa.
-4. Vuelta a casa, preferiblemente por el camino no visto a la ida.
-5. Llegada a la casa, puerta entreabierta.
+5. Tras salir del ayuntamiento, en la dirección contraria a la entrada, se llegará a un pequeño parque con una fuente y un banco. Ahí, se podrá descansar y pasará el tiempo. Al pulsar sobre el banco el tiempo pasará. Se ejecutará una animación que oscurecerá el cielo y será hora de volver a casa.
+6. Vuelta a casa, ya que se estará cerca y no habrá dificultad en ir desde ahí. También se podrá explorar todo el pueblo iluminado de noche.
+7. Llegada a la casa, puerta entreabierta. Fin del recorrido.
 
 ### ¿Quién habita este lugar?
 
