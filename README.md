@@ -33,6 +33,7 @@ En negrita, los paquetes de Unity Registry que se deben de instalar aparte para 
 - Visual Studio Editor (preinstalado).
 - **ProBuilder** (instalación aparte). Hay que instalar también el soporte a URP al instalar el paquete. Si no, habrá problemas con los materiales.
 - **ProGrids** (instalación aparte, experimental).
+- Más adelante se instalarán más paquetes.
 
 ### De la Asset Store (aparte)
 
