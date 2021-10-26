@@ -16,9 +16,17 @@ Las carpetas que vienen incluidas con la plantilla de los proyectos URP se dejar
 
 Fuera de la carpeta **Assets**, en la raíz del proyecto, se encontrará la carpeta de **Preproducción**, que contendrá información sobre la preproducción de los niveles, distribuidas en carpeta según el tipo de nivel que se esté haciendo de ejemplo.
 
-## Paquetes instalados en este proyecto
+## Descripción técnica y paquetes instalados
 
-### De Unity Technologies (básicos)
+### Versión de Unity
+
+La versión de Unity en la que se ha construido este proyecto es **2020.3.19f1**, no se ha testeado en versiones posteriores (aunque en principio debería de funcionar sin mayor problema).
+
+### Importación
+
+Para utilizar este repositorio, simplemente hay que clonar el proyecto a través de GIT (o descargando todo en un zip) y abriendo la carpeta raíz en Unity. Tras importación del proyecto, puede tardar unos minutos, se podrá comenzar a utilizar.
+
+### De Unity Technologies (a través del Package Manager)
 
 En negrita, los paquetes de Unity Registry que se deben de instalar aparte para la asignatura.
 
@@ -46,7 +54,9 @@ Probablemente se instalen otros a lo largo del curso, se irá viendo.
 
 ### De fuera de la Asset Store
 
-Al comienzo del curso, ninguno, pero más adelante se instalará [Fungus](https://github.com/snozbot/fungus) de su repositorio.
+Al comienzo del curso, ninguno, pero más adelante se instalará [Fungus](https://github.com/snozbot/fungus) de su repositorio. Existe una versión de Fungus en la Asset Store, pero se actualiza más lentamente y, en el momento de la creación de este repositorio, no se podía instalar en ninguna versión de Unity por encima de 2020.1.
+
+Según se añadan paquetes extras para, por ejemplo, assets para la decoración de niveles o skyboxes, se creará un listado aquí. Todo elemento que sobre de dichos paquetes se eliminará para no saturar el proyecto (como se eliminará próximamente todo lo sobrante de los Starter Assets).
 
 ## Docencia a través de este proyecto
 
