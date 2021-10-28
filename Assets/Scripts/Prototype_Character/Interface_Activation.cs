@@ -4,6 +4,6 @@ using UnityEngine;
 
 public interface Interface_Activation
 {
-    // Start is called before the first frame update
-    public void ExecuteAction();
+    // Planned to extend this method and his inheritance.
+    public abstract void ExecuteAction();
 }

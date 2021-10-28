@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.2257134, b: 0.30692226, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -46160,7 +46160,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh21568
+  m_Name: pb_Mesh23898
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -64464,6 +64464,10 @@ PrefabInstance:
     - target: {fileID: 1529143830892813255, guid: b1642651c91d67211b76c69a2074e471, type: 3}
       propertyPath: JumpHeight
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529143830892813255, guid: b1642651c91d67211b76c69a2074e471, type: 3}
+      propertyPath: RaycastDistance
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1529143830892813258, guid: b1642651c91d67211b76c69a2074e471, type: 3}
       propertyPath: m_StepOffset

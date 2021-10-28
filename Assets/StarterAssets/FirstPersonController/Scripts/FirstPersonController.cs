@@ -1,4 +1,6 @@
 ﻿using UnityEngine;
+using System.Collections.Generic;
+
 #if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
 using UnityEngine.InputSystem;
 #endif
@@ -46,7 +48,11 @@ namespace StarterAssets
 		[Tooltip("What layers the character uses as ground")]
 		public LayerMask GroundLayers;
 
-		[Header("Cinemachine")]
+        [Header("Interactions")]
+        [Tooltip("Distance to activate object")]
+        public float RaycastDistance = 4;
+
+        [Header("Cinemachine")]
 		[Tooltip("The follow target set in the Cinemachine Virtual Camera that the camera will follow")]
 		public GameObject CinemachineCameraTarget;
 		[Tooltip("How far in degrees can you move the camera up")]
@@ -94,6 +100,7 @@ namespace StarterAssets
 
 		private void Update()
 		{
+            CheckInteractuate();
 			JumpAndGravity();
 			GroundedCheck();
 			Move();
@@ -243,5 +250,47 @@ namespace StarterAssets
 			// when selected, draw a gizmo in the position of, and matching radius of, the grounded collider
 			Gizmos.DrawSphere(new Vector3(transform.position.x, transform.position.y - GroundedOffset, transform.position.z), GroundedRadius);
 		}
+
+        private void CheckInteractuate()
+        {
+            if (_input.activateElement == true)
+            {
+                RaycastHit hit;
+
+                if (Physics.Raycast(Camera.main.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2, 0)), out hit, RaycastDistance))
+                {
+                    if (hit.transform.tag == "Interactuable")
+                    {
+                        List<Interface_Activation> listas;
+                        GetInterfaces<Interface_Activation>(out listas, hit.transform.gameObject);
+                        foreach (Interface_Activation item in listas)
+                        {
+                            item.ExecuteAction();
+                        }
+
+
+                    }
+
+                }
+            }
+            _input.activateElement = false;
+
+
+        }
+
+        // Script from Unity Forums: https://answers.unity.com/questions/523409/strategy-pattern-with-monobehaviours.html
+        public static void GetInterfaces<T>(out List<T> resultList, GameObject objectToSearch) where T : class
+        {
+            MonoBehaviour[] list = objectToSearch.GetComponents<MonoBehaviour>();
+            resultList = new List<T>();
+            foreach (MonoBehaviour mb in list)
+            {
+                if (mb is T)
+                {
+                    //found one
+                    resultList.Add((T)((System.Object)mb));
+                }
+            }
+        }
 	}
 }
