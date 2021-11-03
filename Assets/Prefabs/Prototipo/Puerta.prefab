@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 3167965289151509118}
   - component: {fileID: 7034719309454589175}
   - component: {fileID: 2560814768680318523}
-  - component: {fileID: 4413358054381231632}
   m_Layer: 0
   m_Name: Puerta
   m_TagString: Untagged
@@ -314,18 +313,3 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
---- !u!111 &4413358054381231632
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7200161532517684596}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 0}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0

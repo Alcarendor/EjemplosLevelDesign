@@ -5,22 +5,60 @@ using UnityEngine;
 public class Activator_animation : MonoBehaviour, Interface_Activation
 {
     // At this moment, only executable one time
+    [Header("Modos y usos")]
+    [Tooltip("Si es true, se avanzará en el índice de animaciones y, al llegar al final, se reiniciará. En este caso, solo se necesita un elemento en la lista de animators. Si está en false, se reproducirá una animación por cada animator.")]
+    public bool secuencial = false;
+    [Tooltip("Si este objeto se ha utilizado alguna vez, para objetos de un solo uso")]
     public bool used = false;
 
-    // List to add multiple simple animations.
-    public Animation[] animationList;
+    [Header("Listados")]
+    [Tooltip("Lista de los animator de los diferentes objetos que se vayan a animar (en el caso de que haya múltiples objetos para animar")]
+    public Animator[] AnimatorList;
+
+    public string[] AnimationStateName;
+    private int indiceActual = 0;
+
+    private void Start()
+    {
+        if (AnimatorList.Length != AnimationStateName.Length && !secuencial)
+        {
+            throw new System.Exception("Debe de haber el mismo número de nombres que de animacioneS");
+        }
+        else if (AnimatorList.Length > 1 && secuencial)
+        {
+            throw new System.Exception("En el modo secuencial sólo puede haber un animator");
+        }
+    }
 
     public void ExecuteAction()
     {
-        if (animationList.Length > 0 && !used)
-        {
-            for (int i = 0; i < animationList.Length; i++)
-            {
-                animationList[i].Play();
-            }
-            used = true;
-        }
+        if (AnimatorList.Length > 0 && !used && !secuencial)
+            PlayAllAnimations();
+        else if (secuencial)
+            SecuencedAnimation();
+        else if (AnimatorList.Length == 0)
+            Debug.Log("No animations in the " + gameObject.name + " object");
+        else if (used)
+            Debug.Log("Animación usada");
+    }
 
-        else Debug.Log("No animations in the " + gameObject.name + " object");
+    private void SecuencedAnimation()
+    {
+        Debug.Log(indiceActual);
+        if (indiceActual > AnimatorList.Length)
+        {
+            indiceActual = 0;
+        }
+        AnimatorList[0].Play("Base Layer." + AnimationStateName[indiceActual]);
+        indiceActual++;
+    }
+
+    private void PlayAllAnimations()
+    {
+        for (int i = 0; i < AnimatorList.Length; i++)
+        {
+            AnimatorList[i].Play("Base Layer." + AnimationStateName[i]);
+        }
+        used = true;
     }
 }
