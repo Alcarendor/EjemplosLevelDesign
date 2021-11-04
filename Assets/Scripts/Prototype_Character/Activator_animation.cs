@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// Esta clase se utiliza para animaciones simples: o un objeto con multiples animaciones secuenciales o, en su defecto, varios objetos con una animacion cada uno.
 public class Activator_animation : MonoBehaviour, Interface_Activation
 {
     // At this moment, only executable one time
@@ -15,19 +16,20 @@ public class Activator_animation : MonoBehaviour, Interface_Activation
     [Tooltip("Lista de los animator de los diferentes objetos que se vayan a animar (en el caso de que haya múltiples objetos para animar")]
     public Animator[] AnimatorList;
 
+    [Tooltip("Esta lista contiene los nombres de las animaciones que hay que lanzar. Deben de ser los nombres que aparecen en el Animator")]
     public string[] AnimationStateName;
+    //El indice interno que utilizaremos para recorrer la lista de animaciones
     private int indiceActual = 0;
 
     private void Start()
     {
+        if (this.tag != "Interactuable")
+            throw new System.Exception("El tag del objeto debe de ser Interactuable");
         if (AnimatorList.Length != AnimationStateName.Length && !secuencial)
-        {
             throw new System.Exception("Debe de haber el mismo número de nombres que de animacioneS");
-        }
         else if (AnimatorList.Length > 1 && secuencial)
-        {
             throw new System.Exception("En el modo secuencial sólo puede haber un animator");
-        }
+        
     }
 
     public void ExecuteAction()
@@ -37,7 +39,7 @@ public class Activator_animation : MonoBehaviour, Interface_Activation
         else if (secuencial)
             SecuencedAnimation();
         else if (AnimatorList.Length == 0)
-            Debug.Log("No animations in the " + gameObject.name + " object");
+            Debug.LogWarning("No animations in the " + gameObject.name + " object");
         else if (used)
             Debug.Log("Animación usada");
     }
