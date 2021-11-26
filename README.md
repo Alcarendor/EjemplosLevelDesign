@@ -54,9 +54,10 @@ Probablemente se instalen otros a lo largo del curso, se irá viendo.
 
 ### De fuera de la Asset Store
 
-Al comienzo del curso, ninguno, pero más adelante se instalará [Fungus](https://github.com/snozbot/fungus) de su repositorio. Existe una versión de Fungus en la Asset Store, pero se actualiza más lentamente y, en el momento de la creación de este repositorio, no se podía instalar en ninguna versión de Unity por encima de 2020.1.
-
-Según se añadan paquetes extras para, por ejemplo, assets para la decoración de niveles o skyboxes, se creará un listado aquí. Todo elemento que sobre de dichos paquetes se eliminará para no saturar el proyecto (como se eliminará próximamente todo lo sobrante de los Starter Assets).
+- Edición personalizada de los Standard Assets, únicamente añadiendo lo relacionado con los terrenos. Se ha añadido en la carpeta [StandardAssets](https://github.com/Alcarendor/EjemplosLevelDesign/tree/main/Assets/Standard%20Assets)
+- Pequeñas actualizaciones de código para añadir un sistema, escalable, de interactuaciones. Se han modificado los ficheros del [Input System](https://github.com/Alcarendor/EjemplosLevelDesign/tree/main/Assets/StarterAssets/InputSystem) de los Starter Assets para añadir un nuevo input, así como los siguientes ficheros:
+  - El fichero [First Person Controller](https://github.com/Alcarendor/EjemplosLevelDesign/blob/main/Assets/StarterAssets/FirstPersonController/Scripts/FirstPersonController.cs). Se ha planeado la reversión de este fichero al formato original y sacar todo este contenido a otra clase, para que también se pueda aplicar sobre el Third Person Controller.
+  - Se ha añadido la carpeta [Scripts](https://github.com/Alcarendor/EjemplosLevelDesign/tree/main/Assets/Scripts) con los elementos necesarios para que este activador genérico funcione (todavía en beta, sobre todo en lo relacionado con las animaciones).
 
 ## Docencia a través de este proyecto
 
