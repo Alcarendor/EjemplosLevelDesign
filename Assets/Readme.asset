@@ -13,38 +13,42 @@ MonoBehaviour:
   m_Name: Readme
   m_EditorClassIdentifier: 
   icon: {fileID: 2800000, guid: 7801804018a7dcf42abb827444e18660, type: 3}
-  title: Universal Render Pipeline Template
+  title: Ejemplos de diseño de niveles 2021/2022
   sections:
-  - heading: Universal Render Pipeline
-    text: 'The Universal Project Template configures Project settings for Projects where performance, wide platform support, and ease of customizing graphics are the primary considerations.'
+  - heading: Ejemplos de diseño de niveles (2021/2022)
+    text: 'Repositorio con ejemplos y ejercicios de Diseño de Niveles durante el curso 2012/2022.'
+    linkText: 
+    url: 
+  - heading: Orientación del repositorio
+    text: 'En este repositorio se irán colocando los diferentes ejercicios, ejemplos y otra información relevante para el desarrollo de la asignatura. También se usará como referencia de uso.'
     linkText: 
     url: 
   - heading:
-    text: 'This Template uses the Universal Render Pipeline (URP) and Shader Graph.'
-    linkText: 
-    url: 
-  - heading:
-    text: 'URP is prebuilt Scriptable Render Pipeline that is quick and easy to customize, and lets you create optimized graphics across a wide range of platforms. URP also includes an optimized 2D renderer complete with 2D lights and pixel perfect rendering, and an integrated post-processing solution.'
-    linkText: 
-    url: 
-  - heading:
-    text: 'Shader Graph is a tool that allows you to create shaders using a visual node editor instead of writing code.'
-    linkText: 
-    url: 
-  - heading: 
-    text: 'This template contains a sample Scene that contains examples of how to configure lighting settings, Materials, Shaders, and post-processing effects in URP, several preconfigured Universal Render Pipeline Assets that let you quickly swap between graphics quality levels, and Presets that have been optimized for use with URP.'
+    text: 'Este proyecto tendrá como plantilla de Unity el proyecto con **URP**, ya que al final de cuatrimestre se utilizará para la iluminación de los escenarios.'
     linkText:
     url:
-  - heading: 
-    text: 'This template contains a sample Scene that contains examples of how to configure lighting settings, Materials, Shaders, and post-processing effects in URP, several preconfigured Universal Render Pipeline Assets that let you quickly swap between graphics quality levels, and Presets that have been optimized for use with URP.'
+  - heading: Distribución de carpetas
+    text: 'Las carpetas estarán ordenadas en este repositorio como se pretende que se ordenen durante el transcurso de la asignatura. La ordenación de carpetas es algo relevante y muy importante en la organización de proyectos de Unity, por lo que se prestará especial atención a ello.'
+    linkText: 
+    url: 
+  - heading:
+    text: 'Las carpetas que vienen incluidas con la plantilla de los proyectos URP se dejarán como ejemplo del sistema de iluminación y para usarlas en clase cuando llegue el momento.'
     linkText:
     url:
-  - heading: 
-    text: 'To read more about URP and its built-in features, see the '
-    linkText: URP documentation.
-    url: https://docs.unity3d.com/Packages/com.unity.render-pipelines.universal@latest/index.html
-  - heading: 
-    text: 'For more information about Shader Graph, see the '
-    linkText: Shader Graph documentation
-    url: https://docs.unity3d.com/Packages/com.unity.shadergraph@latest
-  loadedLayout: 1
+  - heading:
+    text: 'Fuera de la carpeta **Assets**, en la raíz del proyecto, se encontrará la carpeta de **Preproducción**, que contendrá información sobre la preproducción de los niveles, distribuidas en carpeta según el tipo de nivel que se esté haciendo de ejemplo.'
+    linkText:
+    url:
+  - heading: Distribución de carpetas
+    text: 'Las carpetas estarán ordenadas en este repositorio como se pretende que se ordenen durante el transcurso de la asignatura. La ordenación de carpetas es algo relevante y muy importante en la organización de proyectos de Unity, por lo que se prestará especial atención a ello.'
+    linkText: 
+    url: 
+  - heading:
+    text: 'Las carpetas que vienen incluidas con la plantilla de los proyectos URP se dejarán como ejemplo del sistema de iluminación y para usarlas en clase cuando llegue el momento.'
+    linkText:
+    url:
+  - heading:
+    text: 'Fuera de la carpeta **Assets**, en la raíz del proyecto, se encontrará la carpeta de **Preproducción**, que contendrá información sobre la preproducción de los niveles, distribuidas en carpeta según el tipo de nivel que se esté haciendo de ejemplo.'
+    linkText:
+    url:
+ 
