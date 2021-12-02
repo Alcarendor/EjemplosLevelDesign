@@ -49,6 +49,7 @@ En negrita, los paquetes de Unity Registry que se deben de instalar aparte para 
 - [Starter Assets - Third person Character Controller](https://assetstore.unity.com/packages/essentials/starter-assets-third-person-character-controller-196526).
 - Una versión modificada de los Standard Assets, que incluye solamente lo relacionado con el terreno.
 - [Rock Package](https://assetstore.unity.com/packages/3d/props/exterior/rock-package-118182), para tener un grupo de rocas con LOD que utilizar en las prácticas de terrenos.
+- [Rocks](https://assetstore.unity.com/packages/3d/props/exterior/rocks-604): para tener rocas sin LOD con las que pintar en terrenos.
 
 Ambos proyectos tienen ya actualizados sus materiales a URP.
 
