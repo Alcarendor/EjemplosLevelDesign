@@ -63,6 +63,8 @@ namespace StarterAssets
 		[Header("Interactions")]
         [Tooltip("Distance to activate object")]
         public float RaycastDistance = 4;
+        [Tooltip("Element from where a raycast will be shot")]
+        public GameObject RaycastLauncher;
 
 		// cinemachine
 		private float _cinemachineTargetYaw;
@@ -322,12 +324,19 @@ namespace StarterAssets
 
 		private void CheckInteractuate()
         {
+
+
             if (_input.activateElement == true)
             {
+                //Layer Mask para ignorar el layer 6 (el del player).z
+                int layermask = 1 << 6;
+                layermask = ~layermask;
+
                 RaycastHit hit;
 
-                if (Physics.Raycast(Camera.main.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2, 0)), out hit, RaycastDistance))
+                if (Physics.Raycast(RaycastLauncher.transform.position, Camera.main.transform.forward, out hit, RaycastDistance, layermask))
                 {
+                    Debug.Log(hit.transform.name);
                     if (hit.transform.tag == "Interactuable")
                     {
                         List<Interface_Activation> listas;
