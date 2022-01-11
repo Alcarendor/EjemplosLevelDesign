@@ -12,11 +12,22 @@ public class MovingPlatformVerySimple : MonoBehaviour
     {
         Tween myTween = transform.DOMove(Waypoint.position, 10);
         myTween.SetLoops(-1, LoopType.Yoyo);
+        myTween.SetUpdate(UpdateType.Fixed);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter(Collider other)
     {
+        if (other.transform.tag == "Player")
+        {
+            other.transform.parent = this.transform;
+        }
+    }
 
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.transform.tag == "Player")
+        {
+            other.transform.parent = null;
+        }
     }
 }
