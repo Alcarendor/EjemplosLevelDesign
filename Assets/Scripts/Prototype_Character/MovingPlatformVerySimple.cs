@@ -5,14 +5,31 @@ using DG.Tweening;
 
 public class MovingPlatformVerySimple : MonoBehaviour
 {
+    [Header("Waypoints")]
+    [Tooltip("No hace falta poner el punto inicial")]
+    [SerializeField] private List<Transform> Waypoints;
 
-    public Transform Waypoint;
+    [Header("Enumerados de movimiento")]
+    [Tooltip("Dejar en Fixed de manera predeterminada para que funcione correctamente. Cambiar asumiendo el riesgo.")]
+    public UpdateType tipoUpdate = UpdateType.Fixed;
+    [Tooltip("No seleccionar nada para que haga un suavizado al acabar el movimiento. Seleccionar Linear para que no haga ningún suavizado durante los movimientos.")]
+    public Ease tipoMovimiento;
+
+    [Header("Pausa y tiempos")]
+    [SerializeField] private float tiempoPausa = 0f;
+    [Tooltip("Si solo se pone un elemento, se aplicará el mismo tiempo a todos los movimientos del array. Si se pone más de un tiempo pero el valor es diferente al tamaño del listado de Waypoints, dará error.")]
+    [SerializeField] private List<float> listaTiempos;
+
     // Start is called before the first frame update
     void Start()
     {
-        Tween myTween = transform.DOMove(Waypoint.position, 10);
-        myTween.SetLoops(-1, LoopType.Yoyo);
-        myTween.SetUpdate(UpdateType.Fixed);
+        for (int i = 0; 0 < Waypoints.Count; i++)
+        {
+
+        }
+        //Tween myTween = transform.DOMove(Waypoint.position, 10);
+        //myTween.SetLoops(-1, LoopType.Yoyo);
+        //myTween.SetUpdate(UpdateType.Fixed);
     }
 
     private void OnTriggerEnter(Collider other)
